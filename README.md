@@ -61,8 +61,8 @@ TastyBites/
 
 Created by **[Your Name]**  
 📧 Email: yourname@email.com  
-🔗 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
-🐱 GitHub: [github.com/yourusername](https://github.com/yourusername)
+🔗 LinkedIn: https://www.linkedin.com/in/keerthana-karasi-8a0590292/ 
+🐱 GitHub: https://github.com/Keerthana21-p
 
 ---
 
