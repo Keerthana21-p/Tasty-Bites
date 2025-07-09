@@ -60,7 +60,7 @@ TastyBites/
 ## 📬 Contact
 
 Created by **[Your Name]**  
-📧 Email: yourname@email.com  
+📧 Email: keerthanakarasi@email.com  
 🔗 LinkedIn: https://www.linkedin.com/in/keerthana-karasi-8a0590292/ 
 🐱 GitHub: https://github.com/Keerthana21-p
 
