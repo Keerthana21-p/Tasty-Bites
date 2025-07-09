@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Recipes - Tasty Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Tasty Bites🍽️</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="recipe.html">Recipes</a></li>
+        <li class="nav-item"><a class="nav-link active" href="recipe-page2.html"></a></li>
+        <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Title & Intro -->
+<div class="container my-5">
+    <h2 class="text-center mb-3">Sweet Delights: Irresistible Dessert Recipes 🍰</h2>
+    <p class="text-center text-muted">
+      From creamy classics to traditional sweets, indulge in our top dessert recipes!
+    </p>
+  <br>
+  <!-- Search Bar -->
+  <div class="row mb-4">
+    <div class="col-md-6 mx-auto">
+      <input type="text" class="form-control" id="searchRecipeInput" placeholder="Search for recipes..." oninput="filterRecipeCards()">
+    </div>
+  </div>
+
+
+<div class="container text-center">
+  <div class="row">
+      <div class="container my-5">
+        <div class="row pt-2 g-4">
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="tiramisu.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">	Tiramisu</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                 Italian dessert with coffee-soaked ladyfingers and mascarpone cream.
+               </p>
+              <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#tiramisuModal">
+               View Recipe
+              </button>
+
+              </div>
+            </div>
+          </div>
+ <!-- 2.  Mango Mousse -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="mango.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title"> Mango Mousse</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                Whipped mango puree with cream — light, airy, and perfect for summer.
+               </p>
+             <button class="btn btn-success btn-sm mt-2 " data-bs-toggle="modal" data-bs-target="#mangoMousseModal">
+              View Recipe
+             </button>
+
+              </div>
+            </div>
+          </div>
+  
+  <!-- 3. 	Tres Leches Cake -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="tres.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">	Tres Leches Cake</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               	Latin American sponge cake soaked in 3 kinds of milk.
+               </p>
+             <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#tresLechesModal">
+                 View Recipe
+             </button>
+
+              </div>
+            </div>
+          </div>
+
+  <!-- 4. Gulab jamun -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="gulab.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">	Gulab Jamun</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+              Milk-solid balls soaked in rose-cardamom sugar syrup.
+               </p>
+             <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#gulabJamunModal">
+               View Recipe
+             </button>
+
+              </div>
+            </div>
+          </div>
+
+  <!-- 5.	Apple Pie-->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="apple.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">	Apple Pie</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                American pie filled with spiced apples and buttery crust.
+               </p>
+             <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#applePieModal">
+              View Recipe
+             </button>
+
+              </div>
+            </div>
+          </div>
+
+  <!-- 6. 	Lava Cake -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="lavas.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">	Lava Cake</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               Chocolate cake with molten chocolate center.
+               </p>
+            <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#lavaCakeModal">
+              View Recipe
+            </button>
+
+              </div>
+            </div>
+          </div>
+
+  <!-- 7. 	Fruit Tart -->
+           <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="fruit.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">	Fruit Tart</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+              Pastry crust filled with custard and topped with fruits.
+               </p>
+             <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#fruitTartModal">
+               View Recipe
+             </button>
+
+              </div>
+            </div>
+          </div>
+
+  <!-- 8. Barfi -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="barfis.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">Barfi</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                Milk-based sweet cut into squares (often with nuts).
+               </p>
+            <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#barfiModal">
+                 View Recipe
+            </button>
+
+              </div>
+            </div>
+          </div>
+
+   
+                
+            
+<!-- Pagination -->
+<nav>
+  <ul class="pagination justify-content-center mt-4">
+     <ul class="pagination justify-content-center mt-4">
+    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item active"><a class="page-link" href="recipe.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="Recipe-page2.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="recipes-page3.html">3</a></li>
+    <li class="page-item"><a class="page-link" href="recipes-Next.html">Next</a></li>
+  </ul>
+</nav>
+
+
+       
+
+        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+
+<!-- Tiramisu Recipe Modal -->
+<div class="modal fade" id="tiramisuModal" tabindex="-1" aria-labelledby="tiramisuModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Header -->
+      <div class="modal-header bg-light">
+        <h4 class="modal-title fw-bold" id="tiramisuModalLabel">🍰 Tiramisu Recipe (Classic Italian Style)</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+
+        <!-- Chill Time -->
+        <div class="mb-3">
+          <span class="badge bg-warning text-dark">❄️ Chill Time: 6 hours or overnight</span>
+        </div>
+
+        <!-- Ingredients -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+          <h6 class="text-primary fw-bold mt-3">🥄 For the Mascarpone Cream:</h6>
+          <ul>
+            <li>250g mascarpone cheese (room temperature)</li>
+            <li>3 large egg yolks</li>
+            <li>½ cup granulated sugar</li>
+            <li>1 cup heavy cream (cold)</li>
+            <li>1 tsp vanilla extract (optional)</li>
+          </ul>
+
+          <h6 class="text-primary fw-bold mt-3">☕ For the Coffee Soak:</h6>
+          <ul>
+            <li>1 cup strong brewed coffee (cooled)</li>
+            <li>2 tbsp coffee liqueur (like Kahlua or rum – optional)</li>
+            <li>200g ladyfinger biscuits (savoiardi)</li>
+          </ul>
+
+          <h6 class="text-primary fw-bold mt-3">🍫 For Topping:</h6>
+          <ul>
+            <li>Unsweetened cocoa powder (for dusting)</li>
+            <li>Dark chocolate shavings (optional)</li>
+          </ul>
+        </section>
+
+        <!-- Instructions -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Make the Mascarpone Filling</h6>
+          <ul>
+            <li>Whisk egg yolks and sugar over a double boiler until thick and pale (5 mins).</li>
+            <li>Cool slightly, then whisk in mascarpone cheese until smooth.</li>
+            <li>In a separate bowl, beat heavy cream until stiff peaks form.</li>
+            <li>Gently fold whipped cream into the mascarpone mixture. Do not overmix.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Prepare Coffee Soak</h6>
+          <ul>
+            <li>Mix brewed coffee and coffee liqueur (optional) in a shallow dish.</li>
+            <li>Quickly dip each ladyfinger for 1–2 seconds (do not soak too long).</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Assemble the Tiramisu</h6>
+          <ul>
+            <li>Layer dipped ladyfingers at the base of an 8x8 inch dish.</li>
+            <li>Spread half of the mascarpone cream evenly over them.</li>
+            <li>Repeat with another layer of dipped ladyfingers.</li>
+            <li>Top with remaining mascarpone cream and smooth the top.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 4: Chill and Serve</h6>
+          <ul>
+            <li>Cover and refrigerate for at least 6 hours (overnight preferred).</li>
+            <li>Before serving, dust generously with cocoa powder.</li>
+            <li>Optionally garnish with dark chocolate shavings.</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Mango Mousse Recipe Modal -->
+<div class="modal fade" id="mangoMousseModal" tabindex="-1" aria-labelledby="mangoMousseModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-warning-subtle">
+        <h4 class="modal-title fw-bold" id="mangoMousseModalLabel">🥭 Mango Mousse Recipe</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+
+        <!-- Chill Time Badge -->
+        <div class="mb-3">
+          <span class="badge bg-info text-dark">❄️ Chill Time: 2–4 hours</span>
+        </div>
+
+        <!-- Ingredients Section -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+          <ul>
+            <li>2 large ripe mangoes (or 1 cup mango pulp)</li>
+            <li>½ cup sweetened condensed milk (adjust to taste)</li>
+            <li>1 cup heavy whipping cream (chilled)</li>
+            <li>1½ tsp gelatin or agar-agar powder (for setting)</li>
+            <li>3 tbsp warm water (to dissolve gelatin)</li>
+            <li>1 tsp lemon juice (optional – enhances mango flavor)</li>
+          </ul>
+
+          <h6 class="text-primary fw-bold mt-3">🍧 For Garnish (Optional):</h6>
+          <ul>
+            <li>Whipped cream</li>
+            <li>Mango cubes</li>
+            <li>Mint leaves</li>
+            <li>Chopped pistachios or almonds</li>
+          </ul>
+        </section>
+
+        <!-- Instructions Section -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Prepare Mango Puree</h6>
+          <ul>
+            <li>Peel and chop mangoes.</li>
+            <li>Blend into a smooth puree. You should get around 1 cup.</li>
+            <li>Add lemon juice if using and set aside.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Bloom Gelatin</h6>
+          <ul>
+            <li>Mix gelatin or agar-agar with 3 tbsp warm water.</li>
+            <li>Let it bloom for 5 minutes.</li>
+            <li>Heat gently until fully dissolved. Let it cool slightly.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Make Mousse Mixture</h6>
+          <ul>
+            <li>Whip chilled heavy cream to soft peaks.</li>
+            <li>Fold in condensed milk gently.</li>
+            <li>Add mango puree and dissolved gelatin. Mix until smooth.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 4: Chill and Set</h6>
+          <ul>
+            <li>Spoon mousse into glasses or dessert bowls.</li>
+            <li>Tap to level and chill in the fridge for 2–4 hours.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 5: Garnish and Serve</h6>
+          <ul>
+            <li>Top with whipped cream, mango chunks, mint leaves, or nuts.</li>
+            <li>Serve chilled and enjoy!</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Tres Leches Cake Recipe Modal -->
+<div class="modal fade" id="tresLechesModal" tabindex="-1" aria-labelledby="tresLechesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-light">
+        <h4 class="modal-title fw-bold" id="tresLechesModalLabel">🍰 Tres Leches Cake Recipe</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+
+        <!-- Chill Time -->
+        <div class="mb-3">
+          <span class="badge bg-info text-dark">❄️ Chill Time: 4–6 hrs or overnight</span>
+        </div>
+
+        <!-- Ingredients -->
+        <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+        <h6 class="text-primary fw-bold mt-3">🍰 For the Sponge Cake:</h6>
+        <ul>
+          <li>1 cup all-purpose flour (maida)</li>
+          <li>1½ tsp baking powder</li>
+          <li>¼ tsp salt</li>
+          <li>5 large eggs (separated)</li>
+          <li>1 cup granulated sugar (divided: two ½ cups)</li>
+          <li>1/3 cup whole milk</li>
+          <li>1 tsp vanilla extract</li>
+        </ul>
+
+        <h6 class="text-primary fw-bold mt-3">🥛 For the "Tres Leches" Soak:</h6>
+        <ul>
+          <li>1 can (400 ml) sweetened condensed milk</li>
+          <li>1 can (350 ml) evaporated milk</li>
+          <li>½ cup whole milk or heavy cream</li>
+          <li>1 tsp vanilla extract</li>
+        </ul>
+
+        <h6 class="text-primary fw-bold mt-3">🍦 For the Whipped Cream Topping:</h6>
+        <ul>
+          <li>1 cup heavy whipping cream (chilled)</li>
+          <li>3 tbsp powdered sugar</li>
+          <li>½ tsp vanilla extract</li>
+        </ul>
+
+        <h6 class="text-primary fw-bold mt-3">🍒 Optional Toppings:</h6>
+        <ul>
+          <li>Fresh fruits (berries, cherries, mangoes)</li>
+          <li>Ground cinnamon</li>
+          <li>Toasted coconut flakes</li>
+        </ul>
+
+        <!-- Instructions -->
+        <h5 class="fw-semibold mt-4">👨‍🍳 Instructions</h5>
+
+        <h6 class="text-success mt-3">🔸 Step 1: Bake the Sponge Cake</h6>
+        <ul>
+          <li>Preheat oven to 175°C (350°F). Grease and line a 9x13 or 8x8 inch pan.</li>
+          <li>Whisk flour, baking powder, and salt in a bowl.</li>
+          <li>Beat egg yolks + ½ cup sugar until thick and pale. Add milk and vanilla.</li>
+          <li>Beat egg whites in a separate bowl to soft peaks, then add remaining ½ cup sugar and beat to stiff peaks.</li>
+          <li>Fold yolk mixture into whites, then gently fold in dry ingredients.</li>
+          <li>Bake 25–30 mins. Cool completely in the pan.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 2: Prepare the Milk Soak</h6>
+        <ul>
+          <li>In a bowl, whisk together condensed milk, evaporated milk, whole milk, and vanilla.</li>
+          <li>Poke the cooled cake all over with a fork or skewer.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 3: Soak the Cake</h6>
+        <ul>
+          <li>Pour the milk mixture slowly over the cake, letting it absorb fully.</li>
+          <li>Refrigerate for 4–6 hours or overnight for best results.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 4: Make the Whipped Cream Topping</h6>
+        <ul>
+          <li>Whip cream, powdered sugar, and vanilla until stiff peaks form.</li>
+          <li>Spread evenly over the chilled soaked cake.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 5: Garnish and Serve</h6>
+        <ul>
+          <li>Dust with cinnamon or top with fruits and coconut.</li>
+          <li>Slice and serve chilled. Enjoy!</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Gulab Jamun Recipe Modal -->
+<div class="modal fade" id="gulabJamunModal" tabindex="-1" aria-labelledby="gulabJamunModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Header -->
+      <div class="modal-header bg-light">
+        <h4 class="modal-title fw-bold" id="gulabJamunModalLabel">🍮 Gulab Jamun Recipe (Milk Powder or Khoya)</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+
+        <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+        <h6 class="text-primary mt-3">🟤 For the Dough (Milk Powder Version):</h6>
+        <ul>
+          <li>1 cup milk powder</li>
+          <li>¼ cup all-purpose flour (maida)</li>
+          <li>2 tbsp semolina (rava/sooji)</li>
+          <li>¼ tsp baking soda</li>
+          <li>2 tbsp ghee (clarified butter)</li>
+          <li>¼ cup warm milk (adjust as needed)</li>
+          <li>Ghee or oil – for deep frying</li>
+        </ul>
+
+        <p class="text-muted"><strong>💡 Tip:</strong> You can use 1 cup khoya (mawa) instead of milk powder for a richer version. Adjust milk accordingly.</p>
+
+        <h6 class="text-primary mt-4">🍯 For the Sugar Syrup:</h6>
+        <ul>
+          <li>1½ cups sugar</li>
+          <li>1½ cups water</li>
+          <li>4 green cardamom pods (crushed)</li>
+          <li>A few saffron strands (optional)</li>
+          <li>1 tsp rose water or kewra water (optional)</li>
+          <li>1 tsp lemon juice (prevents crystallization)</li>
+        </ul>
+
+        <h5 class="fw-semibold mt-4">👨‍🍳 Instructions</h5>
+
+        <h6 class="text-success mt-3">🔸 Step 1: Prepare Sugar Syrup</h6>
+        <ul>
+          <li>Combine sugar and water in a pan. Heat until dissolved.</li>
+          <li>Add cardamom, saffron, and rose/kewra water if using.</li>
+          <li>Simmer for 8–10 mins until slightly sticky.</li>
+          <li>Stir in lemon juice and turn off heat. Keep syrup warm.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 2: Make the Dough</h6>
+        <ul>
+          <li>Mix milk powder, maida, semolina, and baking soda in a bowl.</li>
+          <li>Add ghee and rub until crumbly.</li>
+          <li>Gradually add warm milk to form a soft, sticky dough.</li>
+          <li>Cover and rest the dough for 10 minutes.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 3: Shape the Balls</h6>
+        <ul>
+          <li>Grease your palms with ghee.</li>
+          <li>Make smooth, crack-free balls of equal size.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 4: Fry the Gulab Jamuns</h6>
+        <ul>
+          <li>Heat oil/ghee over medium-low heat.</li>
+          <li>Test oil: a small ball should rise slowly.</li>
+          <li>Fry 5–6 balls at a time, stirring gently till golden brown.</li>
+          <li>Drain excess oil and remove from heat.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 5: Soak in Syrup</h6>
+        <ul>
+          <li>Place hot jamuns in warm sugar syrup (not boiling).</li>
+          <li>Soak for at least 2–3 hours to absorb flavor.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 6: Serve</h6>
+        <ul>
+          <li>Garnish with slivered almonds or pistachios.</li>
+          <li>Serve warm or chilled. Delicious either way!</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Apple Pie Recipe Modal -->
+<div class="modal fade" id="applePieModal" tabindex="-1" aria-labelledby="applePieModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Header -->
+      <div class="modal-header bg-light">
+        <h4 class="modal-title fw-bold" id="applePieModalLabel">🥧 Classic Apple Pie Recipe</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <p><strong>❄️ Chill Time:</strong> 1 hour</p>
+
+        <h5 class="fw-semibold mt-4">🧂 Ingredients</h5>
+
+        <h6 class="text-primary mt-3">🧈 For the Pie Crust (Double Crust):</h6>
+        <ul>
+          <li>2½ cups all-purpose flour</li>
+          <li>1 cup (225g) unsalted butter (cold and cubed)</li>
+          <li>1 tsp salt</li>
+          <li>1 tbsp sugar (optional)</li>
+          <li>6–8 tbsp ice water</li>
+        </ul>
+
+        <h6 class="text-primary mt-3">🍎 For the Apple Filling:</h6>
+        <ul>
+          <li>6 cups sliced apples (Granny Smith, Honeycrisp, or mix)</li>
+          <li>¾ cup granulated sugar</li>
+          <li>¼ cup brown sugar</li>
+          <li>1½ tsp cinnamon</li>
+          <li>¼ tsp nutmeg</li>
+          <li>2 tbsp all-purpose flour (or cornstarch)</li>
+          <li>1 tbsp lemon juice</li>
+          <li>1 tsp vanilla extract</li>
+          <li>1 tbsp butter (to dot on top before baking)</li>
+        </ul>
+
+        <h6 class="text-primary mt-3">🥚 For Topping:</h6>
+        <ul>
+          <li>1 egg (beaten with 1 tbsp water – egg wash)</li>
+          <li>Sugar – for sprinkling</li>
+        </ul>
+
+        <h5 class="fw-semibold mt-4">👨‍🍳 Instructions</h5>
+
+        <h6 class="text-success mt-3">🔸 Step 1: Make the Pie Dough</h6>
+        <ul>
+          <li>Mix flour, salt, and sugar in a bowl.</li>
+          <li>Cut cold butter into the flour until crumbly.</li>
+          <li>Add ice water 1 tbsp at a time until dough forms.</li>
+          <li>Divide into 2 disks, wrap in plastic, chill for 1 hour.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 2: Prepare Apple Filling</h6>
+        <ul>
+          <li>Peel and slice apples.</li>
+          <li>Toss with sugars, spices, flour, lemon juice, and vanilla.</li>
+          <li>Let rest for 10–15 minutes to release juices.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 3: Assemble the Pie</h6>
+        <ul>
+          <li>Preheat oven to 220°C (425°F).</li>
+          <li>Roll one dough disk into a pie pan.</li>
+          <li>Fill with apple mixture and dot with butter.</li>
+          <li>Top with second crust (lattice or full). Crimp edges.</li>
+          <li>Brush with egg wash and sprinkle sugar.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 4: Bake</h6>
+        <ul>
+          <li>Bake at 220°C for 15 minutes.</li>
+          <li>Reduce to 180°C and bake 35–45 minutes more.</li>
+          <li>Cover edges with foil if browning too fast.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 5: Cool & Serve</h6>
+        <ul>
+          <li>Cool at least 2 hours to set the filling.</li>
+          <li>Serve with vanilla ice cream or whipped cream.</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Chocolate Lava Cake Modal -->
+<div class="modal fade" id="lavaCakeModal" tabindex="-1" aria-labelledby="lavaCakeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="lavaCakeModalLabel">🍫 Chocolate Lava Cake Recipe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+       
+        <h6 class="fw-semibold mt-3">🧂 Ingredients</h6>
+        <ul>
+          <li>½ cup (115g) unsalted butter</li>
+          <li>170g semi-sweet or dark chocolate (chopped or chips)</li>
+          <li>2 whole eggs</li>
+          <li>2 egg yolks</li>
+          <li>¼ cup (50g) granulated sugar</li>
+          <li>2 tbsp all-purpose flour</li>
+          <li>1 tsp vanilla extract</li>
+          <li>Pinch of salt</li>
+          <li>Butter + cocoa powder or flour (for greasing ramekins)</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-3">🍦 Optional Toppings</h6>
+        <ul>
+          <li>Vanilla ice cream</li>
+          <li>Fresh berries</li>
+          <li>Whipped cream</li>
+          <li>Powdered sugar (for dusting)</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-4">👨‍🍳 Instructions</h6>
+
+        <h6 class="text-success mt-3">🔸 Step 1: Prep the ramekins</h6>
+        <ul>
+          <li>Preheat oven to 220°C (425°F).</li>
+          <li>Butter 4 ramekins and dust lightly with cocoa powder.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 2: Melt chocolate and butter</h6>
+        <ul>
+          <li>Use a double boiler or microwave to melt butter and chocolate until smooth.</li>
+          <li>Let it cool slightly before using.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 3: Make the batter</h6>
+        <ul>
+          <li>Whisk eggs, egg yolks, and sugar until pale and thick.</li>
+          <li>Add vanilla and the cooled chocolate-butter mixture. Mix well.</li>
+          <li>Fold in flour and salt until fully combined.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 4: Fill and bake</h6>
+        <ul>
+          <li>Divide batter between ramekins.</li>
+          <li>Bake for 10–12 minutes. Edges should be firm, centers soft.</li>
+          <li>Top should look set, but slightly jiggly in the middle.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 5: Serve</h6>
+        <ul>
+          <li>Let rest for 1 minute. Run a knife along edges.</li>
+          <li>Invert onto serving plates and tap to release.</li>
+          <li>Dust with powdered sugar. Serve immediately with ice cream or berries.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 🥧 Fruit Tart Full Recipe Modal -->
+<div class="modal fade" id="fruitTartModal" tabindex="-1" aria-labelledby="fruitTartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="fruitTartModalLabel">🥧🍓 Fruit Tart Recipe (Classic French-Style)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <p><strong>❄️ Chill Time:</strong> 1 hour</p>
+
+        <h6 class="fw-semibold mt-3">🥧 For the Tart Crust (Pâte Sucrée):</h6>
+        <ul>
+          <li>1½ cups (190g) all-purpose flour</li>
+          <li>½ cup (115g) unsalted butter (cold and cubed)</li>
+          <li>¼ cup (50g) powdered sugar</li>
+          <li>1 egg yolk</li>
+          <li>2–3 tbsp cold water</li>
+          <li>¼ tsp salt</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-3">🍮 For the Pastry Cream (Vanilla Custard):</h6>
+        <ul>
+          <li>2 cups (500 ml) milk</li>
+          <li>½ cup (100g) sugar</li>
+          <li>4 egg yolks</li>
+          <li>¼ cup (30g) cornstarch</li>
+          <li>1 tsp vanilla extract or vanilla bean paste</li>
+          <li>2 tbsp butter</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-3">🍓 For Topping:</h6>
+        <ul>
+          <li>Assorted fresh fruits: strawberries, kiwi, blueberries, mango, grapes, etc.</li>
+          <li><em>Optional glaze:</em> 2 tbsp apricot jam + 1 tbsp water (for shine)</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-4">👨‍🍳 Instructions</h6>
+
+        <h6 class="text-success mt-3">🔸 Step 1: Make the Tart Crust</h6>
+        <ul>
+          <li>In a bowl, mix flour, powdered sugar, and salt.</li>
+          <li>Add cold butter and cut into flour until it resembles coarse crumbs.</li>
+          <li>Mix in egg yolk and cold water a little at a time until dough just comes together.</li>
+          <li>Form into a disk, wrap, and chill for 30–60 minutes.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 2: Bake the Tart Shell</h6>
+        <ul>
+          <li>Preheat oven to 180°C (350°F).</li>
+          <li>Roll dough into a circle and press into a 9-inch tart pan.</li>
+          <li>Prick base with a fork, line with parchment, fill with weights.</li>
+          <li>Bake for 15 minutes, remove weights, and bake another 8–10 minutes.</li>
+          <li>Cool completely.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 3: Make Pastry Cream</h6>
+        <ul>
+          <li>Heat milk until just boiling.</li>
+          <li>In a bowl, whisk egg yolks, sugar, and cornstarch until pale.</li>
+          <li>Temper eggs by slowly pouring in hot milk while whisking.</li>
+          <li>Return to pan and cook on medium until thick.</li>
+          <li>Remove from heat, add vanilla and butter. Chill covered.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 4: Assemble the Fruit Tart</h6>
+        <ul>
+          <li>Spread chilled pastry cream into the tart shell.</li>
+          <li>Arrange fruits in patterns (rings or spirals work best).</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 5: Optional Glaze</h6>
+        <ul>
+          <li>Heat apricot jam + water and strain.</li>
+          <li>Brush over fruits for shine and freshness.</li>
+        </ul>
+
+        <p class="mt-4">🍰 <strong>Serve chilled</strong> and enjoy your elegant fruit tart!</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 🍬 Barfi Recipe Modal -->
+<div class="modal fade" id="barfiModal" tabindex="-1" aria-labelledby="barfiModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="barfiModalLabel">🍬 Barfi Recipe (Milk Powder Version)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+
+        <h6 class="fw-semibold mt-2">🧂 Ingredients</h6>
+        <ul>
+          <li>2 cups milk powder</li>
+          <li>½ cup full-fat milk</li>
+          <li>¼ cup ghee (clarified butter)</li>
+          <li>½ cup sugar</li>
+          <li>¼ tsp cardamom powder (elaichi)</li>
+          <li>2 tbsp chopped nuts (almonds, pistachios)</li>
+          <li>A few saffron strands (optional)</li>
+          <li>Silver leaf (optional, for decoration)</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-4">👨‍🍳 Instructions</h6>
+
+        <h6 class="text-success mt-3">🔸 Step 1: Prepare the pan</h6>
+        <ul>
+          <li>Grease a plate or tray with ghee or line it with parchment paper.</li>
+          <li>Set aside for later use.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 2: Cook the barfi mixture</h6>
+        <ul>
+          <li>Heat ghee in a non-stick pan over low flame.</li>
+          <li>Add milk and milk powder, stirring continuously to avoid lumps.</li>
+          <li>Once combined, add sugar and cook on low to medium flame.</li>
+          <li>Keep stirring — the mixture will thicken gradually.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 3: Add flavors</h6>
+        <ul>
+          <li>Add cardamom powder, saffron strands (if using), and half the chopped nuts.</li>
+          <li>Stir until the mixture starts to leave the sides of the pan and forms a soft dough-like texture.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 4: Set the barfi</h6>
+        <ul>
+          <li>Transfer the mixture to the greased tray and flatten using a spatula or greased fingers.</li>
+          <li>Top with remaining nuts and silver leaf if desired.</li>
+          <li>Let it cool and set completely for 1–2 hours.</li>
+        </ul>
+
+        <h6 class="text-success mt-3">🔸 Step 5: Cut and Serve</h6>
+        <ul>
+          <li>Cut into squares or diamond shapes.</li>
+          <li>Store in an airtight container at room temperature for 4–5 days or refrigerate up to 2 weeks.</li>
+        </ul>
+
+        <p class="mt-4">✨ Enjoy this melt-in-the-mouth traditional Indian sweet made with just a few pantry staples!</p>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+

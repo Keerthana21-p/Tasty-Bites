@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+   
+    <title>Tasty Bites</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+
+   
+  <style>
+  .img-zoom {
+    transition: transform 0.3s ease;
+  }
+
+  .img-zoom:hover {
+    transform: scale(1.1); 
+  }
+  .foot{
+    background-color: black;
+    text-align: center;
+    color: blanchedalmond;
+    padding: 1em;
+    max-width: 100%;
+  }
+  .card.recipe-card {
+  height: 100%;
+}
+.recipe-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recipe-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+  
+  
+
+
+ </style>
+
+
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-5" href="#">Tasty Bites🍽️</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Recipe.html">Recipes</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Categories
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Indian</a></li>
+            <li><a class="dropdown-item" href="#">Chinese</a></li>
+            
+            <li><a class="dropdown-item" href="#">Desserts</a></li>
+            <li><a class="dropdown-item" href="#">Healthy</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-dark ms-3" data-bs-toggle="modal" data-bs-target="#loginModal">
+            Login
+          </button>
+        </li> 
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+    <div class="image-container d-flex">
+        <img src="chitti.jpg"  alt="Delicious Food" style="width:100%;height:600px;">
+    </div>
+    <div class="container-fluid my-5">
+      <div class="row text-center">
+      <div class="col-md-3 mb-4">
+        <img src="biryani.png" class="img-fluid rounded-circle img-zoom mb-2" alt="Indian" style="height:150px; width:150px;">
+        <h5>Indian</h5>
+      </div>
+      <div class="col-md-3 mb-4">
+        <img src="noodles.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Chinese" style="height:150px; width:150px;">
+        <h5>Chinese</h5>
+      </div>
+      <div class="col-md-3 mb-4">
+        <img src="cake.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Desserts" style="height:150px; width:150px;">
+        <h5>Desserts</h5>
+      </div>
+      <div class="col-md-3 mb-4">
+        <img src="salads.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Healthy" style="height:150px; width:150px;">
+        <h5>Healthy</h5>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="container-fluid pt-5">
+    <h2 class="text-center mb-3">Featured Recipes</h2>
+    </div>
+    
+<div class="container text-center">
+  <div class="row">
+      <div class="container my-5">
+        <div class="row pt-2">
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-40 d-flex flex-column  recipe-card">
+              <img src="butter.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">Delicious Butter Chicken</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                A creamy, flavorful and rich butter chicken cooked in a spiced tomato gravy one of the most popular Indian dishes worldwide!
+               </p>
+               
+              </div>
+            </div>
+          </div>
+       
+          <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card h-40 d-flex flex-column recipe-card">
+              <img src="kung pao chicken.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">Delicious Kung pao chicken</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               A bold and spicy Chinese stir-fry with tender chicken, peanuts, and vegetables in a delicious savory sauce a must-try favorite!
+               </p>
+               
+              </div>
+            </div>
+          </div>
+    
+        
+          <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card h-30 d-flex flex-column recipe-card">
+              <img src="tiramisu.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image" height="220">
+              <div class="card-body">
+                <h5 class="card-title">Delicious Tiramisu</h5>
+    
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                <br>
+               <p class="card-text">
+                 A luscious Italian dessert with coffee-soaked ladyfingers and creamy mascarpone a must-try favorite!.
+               </p>
+  
+              </div>
+            </div>
+          </div>
+      
+            <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card h-0 d-flex flex-column recipe-card">
+              <img src="Broccoli.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom  Image" height="200">
+              <br>
+              <div class="card-body">
+                <h5 class="card-title">Delicious Broccoli & Tofu Stir Fry</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+               <p class="card-text">
+                A quick, healthy, protein-packed stir fry with crispy tofu and fresh veggies — perfect for any meal!
+               </p>
+              
+              </div>
+            </div>
+          </div>
+    </div>
+ </div>
+
+<div class="container-fluid my-5">
+  <div class="bg-light p-5 rounded text-center">
+    <h2 class="mb-3">Subscribe to Our Newsletter</h2>
+    <p class="mb-4">Get the latest recipes, cooking tips, and special offers straight to your inbox!</p>
+    
+    <form class="row g-3 justify-content-center">
+      <div class="col-md-6">
+        <input type="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="container-fluid my-5">
+  <h2 class="section-title text-center mb-4">What Our Readers Say</h2>
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 p-3 border-0 shadow-sm">
+        <p>"I tried the butter chicken recipe turned out amazing! My family loved it. Simple steps, great taste."</p>
+        <h6 class="mt-3 mb-0">— Preshu.V</h6>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 p-3 border-0 shadow-sm">
+        <p>"Love the healthy recipes section easy to follow and perfect for my meal preps!"</p>
+        <h6 class="mt-3 mb-0">— Kutti.K</h6>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 p-3 border-0 shadow-sm">
+        <p>"Beautiful website and very well organized. I found so many great dessert ideas here. Thank you!"</p>
+        <h6 class="mt-3 mb-0">— Chitti.V</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid my-5">
+  <h2 class="section-title text-center mb-4"> About Tasty Bite's</h2>
+  
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <img src="cooking.jpg" class="img-fluid rounded-circle img-zoom" alt="Zoom Image">
+    </div>
+    <div class="col-md-6">
+      <p>Welcome to <strong>Tasty Bites</strong> — your go-to place for delicious, easy-to-follow recipes from around the world! Whether you're a beginner or a seasoned cook, you'll find plenty of inspiration here.</p>
+      
+      <p>I'm <strong>Kutti</strong>, a passionate home chef who loves experimenting in the kitchen and sharing recipes with friends and family. This website was created to help others discover the joy of cooking and make every meal a special experience.</p>
+      
+      <p>Thank you for visiting — happy cooking! 🍳</p>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="foot">
+  <div class="container-fluid">
+    <p class="mb-2">&copy; 2025 Tasty Bites. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+.custom-modal-bg {
+  background-color: #BCCCDC;
+  color: #000;                
+}
+</style>
+
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content custom-modal-bg">
+      
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body with Login Form -->
+      <div class="modal-body">
+        <form>
+           <div class="mb-3 text-start">
+            <label for="loginUsername" class="form-label">User Name</label>
+            <input type="text" class="form-control" id="loginusername" placeholder="Enter Username" required>
+          </div>
+          <div class="mb-3 text-start">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" required>
+          </div>
+          <div class="mb-3 text-start">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-success w-100">Login</button>
+
+          <div class="text-center mt-3">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#forgotModal" data-bs-dismiss="modal">Forgot password?</a>
+
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+     
+    
+
+  <!-- Bootstrap JS (for modal functionality) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="scripts.js"></script>
+
+  </body>
+ 
+ 
+
+
+    
+    
+  
+      
+        
+</html>

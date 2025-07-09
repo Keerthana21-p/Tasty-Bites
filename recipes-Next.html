@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Tasty Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Tasty Bites🍽️</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="recipe.html">Recipes</a></li>
+        <li class="nav-item"><a class="nav-link active" href="recipe-page2.html"></a></li>
+        <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Title & Intro -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Eat Well, Live Well: Healthy Recipes for Every Day 🥗</h2>
+  <p class="text-center text-muted"> Discover delicious, nutrient-packed meals that are light, fresh, and full of flavor perfect for a healthier lifestyle.</p>
+
+ <br>
+  <!-- Search Bar -->
+  <div class="row mb-4">
+    <div class="col-md-6 mx-auto">
+      <input type="text" class="form-control" id="searchRecipeInput" placeholder="Search for recipes..." oninput="filterRecipeCards()">
+    </div>
+  </div>
+
+ 
+</div>
+
+    
+  <div class="container text-center">
+  <div class="row">
+      <div class="container my-5">
+        <div class="row pt-2 g-4">
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="tofu.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title"> Broccoli & Tofu Stir Fry</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                A quick and easy plant-based stir fry packed with antioxidants, fiber, and protein. Fresh broccoli and crispy tofu are tossed in a light soy-garlic sauce — perfect for lunch or dinner!
+               </p>
+               <br>
+              <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#broccoliTofuModal">
+                View Recipe
+              </button>
+
+              </div>
+            </div>
+          </div>
+
+  <!-- 2.  Oats & Banana Smoothie Bowl -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="oats.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title"> Oats & Banana Smoothie Bowl</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                A creamy smoothie bowl made with oats, banana, milk (or almond milk), topped with berries, seeds, and crunchy granola. Great for a high-energy, fiber-rich breakfast.
+               </p>
+              <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#oatsBananaSmoothieModal">
+                   View Recipe
+              </button>
+ 
+              
+              </div>
+            </div>
+          </div>
+  <!-- 3.  Grilled Chicken with Steamed Vegetables -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="breast.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title"> Grilled Chicken with Steamed Vegetables</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               A high-protein, low-carb dish perfect for fitness lovers. Juicy grilled chicken breast served with lightly steamed vegetables like carrots, beans, and zucchini.
+               </p>
+              <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#grilledChickenModal">
+                   View Recipe
+              </button>
+
+              
+              </div>
+            </div>
+          </div>
+
+   <!-- 4.  Sprouted Moong Chaat -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="spros.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">  Sprouted Moong Chaat</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               Protein-packed sprouted green gram tossed with onion, tomato, lemon, and spices. A guilt-free, crunchy snack that’s low in calories and full of nutrients.
+              </p>
+              <br>
+             <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#moongChaatModal">
+             View Recipe
+             </button>
+
+              </div>
+            </div>
+          </div>
+  <!-- 5. Vegetable Clear Soup -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="vegs.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">Vegetable Clear Soup</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               A warm, nourishing soup loaded with vegetables like cabbage, carrot, spinach, and ginger. Low in calories and ideal for weight management.
+              </p>
+              <br>
+             <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#vegClearSoupModal">
+              View Recipe
+             </button>
+
+              </div>
+            </div>
+          </div>
+
+  <!-- 6  Chickpea Salad with Mint Yogurt Dressing -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="sala.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title"> Chickpea Salad </h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+              A protein-rich salad with boiled chickpeas, cucumber, onions, and tomatoes, tossed with a refreshing mint yogurt dressing. Ideal for lunch or post-workout snack
+              </p>
+              <br>
+            
+              <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#chickpeaSaladModal">
+                View Recipe
+              </button>
+
+              </div>
+            </div>
+          </div>
+
+  <!-- 7.  Stuffed Bell Peppers with Brown Rice & Veggies -->
+           <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="pepper.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title"> Stuffed Bell Peppers</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                Colorful bell peppers stuffed with a mixture of brown rice, black beans, corn, and herbs, then baked until tender. Rich in fiber and heart-healthy nutrients.
+               </p>
+               <br>
+         <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#stuffedPeppersModal">
+          View Recipe
+        </button>
+
+              </div>
+            </div>
+          </div>
+
+    <!-- 8. Greek Yogurt with Fruits & Nuts -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="greek.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">Greek Yogurt with Fruits & Nuts</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               Thick yogurt layered with seasonal fruits, walnuts, and honey. A gut-friendly, high-protein dessert or breakfast rich in probiotics and antioxidants.
+               </p>
+             <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#greekYogurtModal">
+               View Recipe
+             </button>
+
+              </div>
+            </div>
+          </div>
+ 
+               
+<!-- Pagination -->
+<nav>
+  <ul class="pagination justify-content-center mt-4">
+     <ul class="pagination justify-content-center mt-4">
+    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item active"><a class="page-link" href="recipe.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="Recipe-page2.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="recipes-page3.html">3</a></li>
+    <li class="page-item"><a class="page-link" href="recipes-Next.html">Next</a></li>
+  </ul>
+</nav>
+
+
+       
+
+        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+
+<!-- 🥦 Broccoli & Tofu Stir Fry Modal -->
+<div class="modal fade" id="broccoliTofuModal" tabindex="-1" aria-labelledby="broccoliTofuModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="broccoliTofuModalLabel">🥦 Broccoli & Tofu Stir Fry</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <h6 class="fw-semibold mt-3">🧂 Ingredients</h6>
+
+        <strong>🍲 For the stir-fry:</strong>
+        <ul>
+          <li>200g firm tofu (pressed and cubed)</li>
+          <li>1½ cups broccoli florets</li>
+          <li>1 small bell pepper (optional, sliced)</li>
+          <li>2 tbsp oil (sesame or vegetable)</li>
+          <li>1 tsp garlic (minced)</li>
+          <li>½ tsp ginger (minced)</li>
+          <li>1–2 spring onions (chopped, white and green separated)</li>
+        </ul>
+
+        <strong>🥣 For the sauce:</strong>
+        <ul>
+          <li>2 tbsp soy sauce (low sodium preferred)</li>
+          <li>1 tbsp oyster sauce (or hoisin sauce for vegan)</li>
+          <li>1 tbsp rice vinegar or white vinegar</li>
+          <li>1 tbsp chili sauce (like sriracha, optional)</li>
+          <li>1 tsp sugar or honey (optional)</li>
+          <li>1 tsp cornflour + 2 tbsp water (slurry)</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-4">👨‍🍳 Instructions</h6>
+
+        <strong>🔸 Step 1: Prep the tofu</strong>
+        <ul>
+          <li>Press tofu for 15–20 minutes to remove excess water.</li>
+          <li>Cut into cubes and pat dry.</li>
+          <li>Optional: Toss in a little cornflour and salt for crisp texture.</li>
+          <li>Pan-fry in 1 tbsp oil until golden and crispy. Set aside.</li>
+        </ul>
+
+        <strong>🔸 Step 2: Stir-fry the vegetables</strong>
+        <ul>
+          <li>Heat 1 tbsp oil in a wok or pan.</li>
+          <li>Add garlic, ginger, and spring onion whites. Sauté 30 seconds.</li>
+          <li>Add broccoli and stir-fry for 2–3 minutes.</li>
+          <li>Add bell peppers and cook till veggies are tender but crisp.</li>
+        </ul>
+
+        <strong>🔸 Step 3: Prepare and add the sauce</strong>
+        <ul>
+          <li>In a bowl, mix all sauce ingredients including cornflour slurry.</li>
+          <li>Pour sauce into the pan, stir, and let it simmer until thickened.</li>
+        </ul>
+
+        <strong>🔸 Step 4: Combine & serve</strong>
+        <ul>
+          <li>Add the fried tofu back into the pan.</li>
+          <li>Toss gently to coat with the sauce.</li>
+          <li>Garnish with spring onion greens.</li>
+          <li>Serve hot with steamed rice or noodles.</li>
+        </ul>
+
+        <p class="mt-3">💚 This recipe is protein-rich, fiber-filled, and perfect for a quick, nutritious dinner!</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 🥣 Oats & Banana Smoothie Bowl Modal -->
+<div class="modal fade" id="oatsBananaSmoothieModal" tabindex="-1" aria-labelledby="oatsBananaSmoothieLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="oatsBananaSmoothieLabel">🥣🍌 Oats & Banana Smoothie Bowl</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <h6 class="fw-semibold mt-3">🧂 Ingredients</h6>
+
+        <strong>🍌 For the smoothie base:</strong>
+        <ul>
+          <li>1 ripe banana (frozen or fresh)</li>
+          <li>½ cup rolled oats (soaked for 10 mins optional)</li>
+          <li>½ cup milk (dairy or plant-based)</li>
+          <li>¼ cup plain yogurt (or plant-based yogurt)</li>
+          <li>1–2 tsp honey or maple syrup (optional)</li>
+          <li>½ tsp cinnamon (optional)</li>
+          <li>1–2 ice cubes (optional)</li>
+        </ul>
+
+        <strong>🍓 Topping ideas (customize as you like):</strong>
+        <ul>
+          <li>Sliced bananas</li>
+          <li>Fresh berries (strawberries, blueberries, raspberries)</li>
+          <li>Chia seeds or flaxseeds</li>
+          <li>Granola</li>
+          <li>Sliced almonds, walnuts, or cashews</li>
+          <li>Peanut butter or almond butter (drizzled)</li>
+          <li>Coconut flakes</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-4">👨‍🍳 Instructions</h6>
+
+        <strong>🔸 Step 1: Make the smoothie base</strong>
+        <ul>
+          <li>In a blender, add banana, oats, milk, yogurt, cinnamon, and sweetener.</li>
+          <li>Blend until thick and creamy.</li>
+          <li>Add more milk for thinner or more oats for thicker texture.</li>
+        </ul>
+
+        <strong>🔸 Step 2: Pour and top</strong>
+        <ul>
+          <li>Pour the smoothie into a shallow bowl.</li>
+          <li>Decorate with toppings in rows or sections for a beautiful finish.</li>
+        </ul>
+
+        <strong>🔸 Step 3: Serve</strong>
+        <ul>
+          <li>Enjoy immediately while chilled and fresh!</li>
+        </ul>
+
+        <p class="mt-3">💡 <em>This smoothie bowl is rich in fiber, potassium, and energy — great for breakfast or post-workout refuel!</em></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 🍗🥦 Grilled Chicken with Steamed Vegetables Modal -->
+<div class="modal fade" id="grilledChickenModal" tabindex="-1" aria-labelledby="grilledChickenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="grilledChickenModalLabel">🍗🥦 Grilled Chicken with Steamed Vegetables</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+       
+        <h6 class="fw-semibold mt-4">🧂 Ingredients</h6>
+
+        <strong>🍗 For the grilled chicken:</strong>
+        <ul>
+          <li>2 boneless, skinless chicken breasts</li>
+          <li>1 tbsp olive oil</li>
+          <li>1 tsp lemon juice</li>
+          <li>1 tsp garlic (minced)</li>
+          <li>½ tsp black pepper</li>
+          <li>½ tsp paprika (or red chili powder)</li>
+          <li>½ tsp dried herbs (oregano, thyme, or Italian herbs)</li>
+          <li>Salt to taste</li>
+        </ul>
+
+        <strong>🥦 For the steamed vegetables:</strong>
+        <ul>
+          <li>½ cup broccoli florets</li>
+          <li>½ cup carrot slices</li>
+          <li>½ cup green beans</li>
+          <li>½ cup bell peppers (optional)</li>
+          <li>Salt and pepper to taste</li>
+          <li>1 tsp olive oil or butter (optional)</li>
+          <li>1 tsp lemon juice or vinegar (optional)</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-4">👨‍🍳 Instructions</h6>
+
+        <strong>🔸 Step 1: Marinate the chicken</strong>
+        <ul>
+          <li>Mix olive oil, garlic, lemon juice, pepper, paprika, herbs, and salt in a bowl.</li>
+          <li>Coat the chicken breasts and marinate for at least 15–30 minutes (or up to 6 hours in the fridge).</li>
+        </ul>
+
+        <strong>🔸 Step 2: Grill the chicken</strong>
+        <ul>
+          <li><strong>Option 1 (Grill):</strong> Preheat grill to medium and cook chicken for 6–7 minutes per side or until done.</li>
+          <li><strong>Option 2 (Pan):</strong> Heat 1 tsp oil in a nonstick pan and cook until golden and cooked through.</li>
+          <li>Let rest for 5 minutes, then slice.</li>
+        </ul>
+
+        <strong>🔸 Step 3: Steam the vegetables</strong>
+        <ul>
+          <li>Steam broccoli, carrots, green beans, and optional veggies for 5–6 minutes.</li>
+          <li>Toss with salt, pepper, lemon juice, and olive oil (if using).</li>
+        </ul>
+
+        <strong>🔸 Step 4: Serve</strong>
+        <ul>
+          <li>Plate grilled chicken slices with steamed vegetables on the side.</li>
+          <li>Optionally, serve with brown rice or quinoa.</li>
+        </ul>
+
+        <p class="mt-3">✅ <em>This dish is high in protein and fiber, making it perfect for a healthy, balanced meal.</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 🥗🌱 Sprouted Moong Chaat Modal -->
+<div class="modal fade" id="moongChaatModal" tabindex="-1" aria-labelledby="moongChaatModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="moongChaatModalLabel">🥗🌱 Sprouted Moong Chaat Recipe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+     
+
+        <h6 class="fw-semibold mt-4">🧂 Ingredients</h6>
+        <ul>
+          <li>1 cup sprouted green moong (mung beans)</li>
+          <li>1 small onion (finely chopped)</li>
+          <li>1 small tomato (finely chopped)</li>
+          <li>½ cucumber (chopped)</li>
+          <li>1 green chili (optional, finely chopped)</li>
+          <li>2 tbsp coriander leaves (finely chopped)</li>
+          <li>½ tsp chaat masala</li>
+          <li>½ tsp roasted cumin powder</li>
+          <li>Salt to taste</li>
+          <li>1 tsp lemon juice (or to taste)</li>
+          <li>1 tbsp pomegranate seeds (optional)</li>
+          <li>1 tbsp sev or crushed papdi (optional, for crunch)</li>
+        </ul>
+
+        <h6 class="fw-semibold mt-4">👨‍🍳 Instructions</h6>
+
+        <strong>🔸 Step 1: Prepare the sprouts</strong>
+        <ul>
+          <li>Rinse and soak whole green moong overnight.</li>
+          <li>Drain and keep in a clean cloth or sprouter for 1–2 days until sprouted.</li>
+          <li>Optionally steam for 2–3 minutes for softness and easy digestion.</li>
+        </ul>
+
+        <strong>🔸 Step 2: Mix the chaat</strong>
+        <ul>
+          <li>In a bowl, combine moong sprouts, onion, tomato, cucumber, and green chili.</li>
+          <li>Add salt, chaat masala, cumin powder, and lemon juice.</li>
+          <li>Toss well to mix flavors.</li>
+        </ul>
+
+        <strong>🔸 Step 3: Serve</strong>
+        <ul>
+          <li>Garnish with coriander, pomegranate seeds, sev, or crushed papdi.</li>
+          <li>Serve immediately as a healthy snack or light lunch.</li>
+        </ul>
+
+        <p class="mt-3">✅ <em>High in protein, fiber, and vitamins — great for weight loss and digestion!</em></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 🥣🌿 Vegetable Clear Soup Modal -->
+<div class="modal fade" id="vegClearSoupModal" tabindex="-1" aria-labelledby="vegClearSoupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="vegClearSoupModalLabel">🥣🌿 Vegetable Clear Soup Recipe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <h6 class="mb-3"><strong>🧂 Ingredients</strong></h6>
+        <ul>
+          <li>1 tsp oil or butter</li>
+          <li>2–3 garlic cloves (finely chopped)</li>
+          <li>½ inch ginger (grated or finely chopped)</li>
+          <li>2 tbsp spring onion whites (chopped)</li>
+          <li>2 tbsp carrots (finely chopped)</li>
+          <li>2 tbsp cabbage (finely chopped)</li>
+          <li>2 tbsp beans (finely chopped)</li>
+          <li>2 tbsp capsicum or bell pepper (optional)</li>
+          <li>3 cups water or vegetable stock</li>
+          <li>Salt to taste</li>
+          <li>¼ tsp crushed black pepper</li>
+          <li>1 tsp soy sauce (optional)</li>
+          <li>1 tsp lemon juice (optional)</li>
+          <li>1 tbsp spring onion greens or coriander – for garnish</li>
+        </ul>
+
+        <h6 class="mt-4"><strong>👨‍🍳 Instructions</strong></h6>
+
+        <strong>🔸 Step 1: Sauté vegetables</strong>
+        <ul>
+          <li>Heat oil or butter in a deep pan.</li>
+          <li>Add garlic, ginger, and spring onion whites. Sauté until aromatic.</li>
+          <li>Add carrots, cabbage, beans, and bell pepper. Stir-fry for 2–3 mins over medium-high heat.</li>
+        </ul>
+
+        <strong>🔸 Step 2: Simmer the soup</strong>
+        <ul>
+          <li>Add 3 cups of water or vegetable stock.</li>
+          <li>Bring to a boil, then simmer for 8–10 mins.</li>
+          <li>Add salt, black pepper, and soy sauce (if using). Mix well and taste test.</li>
+        </ul>
+
+        <strong>🔸 Step 3: Finish & Serve</strong>
+        <ul>
+          <li>Stir in lemon juice for a fresh kick (optional).</li>
+          <li>Turn off the flame and garnish with spring onion greens or coriander.</li>
+          <li>Serve hot with toasted bread or as a warm starter!</li>
+        </ul>
+
+        <p class="mt-3">✅ <em>Light, warming, and full of immune-boosting nutrients. Perfect for detox or a light meal!</em></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 🥗🌱 Chickpea Salad Modal -->
+<div class="modal fade" id="chickpeaSaladModal" tabindex="-1" aria-labelledby="chickpeaSaladModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="chickpeaSaladModalLabel">🥗🌱 Chickpea Salad Recipe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        
+
+        <h6 class="mb-3"><strong>🧂 Ingredients</strong></h6>
+        <ul>
+          <li>1½ cups cooked or canned chickpeas (drained and rinsed)</li>
+          <li>½ cup cucumber (chopped)</li>
+          <li>½ cup tomatoes (chopped, deseeded)</li>
+          <li>¼ cup red onion (finely chopped)</li>
+          <li>¼ cup bell peppers (any color, chopped)</li>
+          <li>2 tbsp fresh coriander or parsley (chopped)</li>
+          <li>1 green chili (optional, finely chopped)</li>
+          <li>1 tbsp olive oil</li>
+          <li>1–2 tsp lemon juice (adjust to taste)</li>
+          <li>½ tsp roasted cumin powder</li>
+          <li>Salt and black pepper to taste</li>
+          <li><em>Optional:</em> 1 tbsp feta cheese, olives, or avocado chunks</li>
+        </ul>
+
+        <h6 class="mt-4"><strong>👨‍🍳 Instructions</strong></h6>
+
+        <strong>🔸 Step 1: Prepare the Chickpeas</strong>
+        <ul>
+          <li>Rinse and drain canned chickpeas well.</li>
+          <li>If using dry chickpeas, soak overnight and boil until soft, then cool.</li>
+        </ul>
+
+        <strong>🔸 Step 2: Mix the Salad</strong>
+        <ul>
+          <li>In a large bowl, combine chickpeas, cucumber, tomatoes, onion, bell peppers, and herbs.</li>
+          <li>Add olive oil, lemon juice, cumin powder, salt, and pepper.</li>
+          <li>Toss gently until everything is well coated.</li>
+        </ul>
+
+        <strong>🔸 Step 3: Garnish and Serve</strong>
+        <ul>
+          <li>Chill the salad for 20 minutes to enhance flavors (optional).</li>
+          <li>Garnish with feta, avocado, or toasted nuts/seeds.</li>
+          <li>Serve fresh as a snack, starter, or light meal.</li>
+        </ul>
+
+        <p class="mt-3 text-muted">✅ <em>High-protein, fiber-rich, and perfect for a refreshing, healthy bite.</em></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 🌶️🍚 Stuffed Bell Peppers Modal -->
+<div class="modal fade" id="stuffedPeppersModal" tabindex="-1" aria-labelledby="stuffedPeppersModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="stuffedPeppersModalLabel">🌶️🍚 Stuffed Bell Peppers Recipe (Vegetarian)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <p><strong>🧂 Ingredients</strong></p>
+
+        <strong>🫑 For the peppers:</strong>
+        <ul>
+          <li>4 large bell peppers (any color)</li>
+          <li>1 tbsp oil (for brushing or baking)</li>
+        </ul>
+
+        <strong>🥣 For the stuffing:</strong>
+        <ul>
+          <li>1 cup cooked rice or quinoa</li>
+          <li>1 small onion (finely chopped)</li>
+          <li>1 tomato (chopped)</li>
+          <li>½ cup corn kernels (boiled or frozen)</li>
+          <li>½ cup cooked black beans or chickpeas (optional)</li>
+          <li>½ cup paneer or cheese (crumbled or grated) – optional</li>
+          <li>1 tsp garlic (minced)</li>
+          <li>½ tsp cumin seeds or powder</li>
+          <li>½ tsp paprika or chili powder</li>
+          <li>Salt and pepper to taste</li>
+          <li>2 tbsp chopped coriander or parsley</li>
+          <li>1 tsp lemon juice</li>
+        </ul>
+
+        <strong>🧀 Optional toppings:</strong>
+        <ul>
+          <li>Grated cheese (cheddar, mozzarella)</li>
+          <li>Chili flakes</li>
+          <li>Crushed tortilla chips (for crunch)</li>
+        </ul>
+
+        <hr>
+
+        <p><strong>👨‍🍳 Instructions</strong></p>
+
+        <strong>🔸 Step 1: Prep the bell peppers</strong>
+        <ul>
+          <li>Cut the tops off and remove seeds and membranes.</li>
+          <li>Brush inside and out with oil.</li>
+          <li>Pre-bake at 180°C (350°F) for 10 minutes to soften (optional but improves texture).</li>
+        </ul>
+
+        <strong>🔸 Step 2: Make the stuffing</strong>
+        <ul>
+          <li>Heat oil in a pan, sauté onion and garlic until soft.</li>
+          <li>Add tomatoes, corn, beans and cook for 2–3 minutes.</li>
+          <li>Add rice, spices, salt, and pepper. Mix well.</li>
+          <li>Turn off heat. Add lemon juice and fresh herbs. Cool slightly.</li>
+          <li>Mix in paneer or cheese (optional).</li>
+        </ul>
+
+        <strong>🔸 Step 3: Stuff and bake</strong>
+        <ul>
+          <li>Fill each bell pepper generously with stuffing.</li>
+          <li>Top with cheese (if using).</li>
+          <li>Place in baking dish and bake at 180°C (350°F) for 20–25 mins until golden and tender.</li>
+        </ul>
+
+        <strong>🔸 Step 4: Serve</strong>
+        <ul>
+          <li>Garnish with fresh herbs, yogurt, or dip.</li>
+          <li>Serve hot with salad, soup, or garlic bread.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 🍧🍓 Greek Yogurt with Fruits & Nuts Modal -->
+<div class="modal fade" id="greekYogurtModal" tabindex="-1" aria-labelledby="greekYogurtModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header bg-light">
+        <h5 class="modal-title fw-bold" id="greekYogurtModalLabel">🍧🍓 Greek Yogurt with Fruits & Nuts</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <p><strong>🧂 Ingredients:</strong></p>
+        <ul>
+          <li>1 cup Greek yogurt (plain or lightly sweetened)</li>
+          <li>½ banana (sliced)</li>
+          <li>¼ cup fresh berries (strawberries, blueberries, raspberries)</li>
+          <li>1 tbsp almonds (chopped or slivered)</li>
+          <li>1 tbsp walnuts or pistachios (chopped)</li>
+          <li>1 tsp chia seeds or flaxseeds (optional)</li>
+          <li>1 tsp honey or maple syrup (optional, for sweetness)</li>
+          <li>A dash of cinnamon (optional)</li>
+        </ul>
+
+        <hr>
+
+        <p><strong>👨‍🍳 Instructions:</strong></p>
+
+        <strong>🔸 Step 1: Prepare the base</strong>
+        <ul>
+          <li>In a bowl, add Greek yogurt.</li>
+          <li>If desired, stir in honey or maple syrup for added sweetness.</li>
+        </ul>
+
+        <strong>🔸 Step 2: Add fruits</strong>
+        <ul>
+          <li>Top with sliced banana, berries, or seasonal chopped fruits like mango, kiwi, or apple.</li>
+        </ul>
+
+        <strong>🔸 Step 3: Add crunch</strong>
+        <ul>
+          <li>Sprinkle chopped nuts and seeds over the fruits.</li>
+          <li>Add a dash of cinnamon for extra flavor (optional).</li>
+        </ul>
+
+        <strong>🔸 Step 4: Serve</strong>
+        <ul>
+          <li>Serve immediately as a breakfast bowl, healthy snack, or post-workout meal.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+

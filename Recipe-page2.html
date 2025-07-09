@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Tasty Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Tasty Bites🍽️</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="recipe.html">Recipes</a></li>
+         <li class="nav-item"><a class="nav-link active" href="recipe-page2.html"></a></li>
+        <li class="nav-item"><a class="nav-link" href="categories.html">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Title & Intro -->
+<div class="container my-5">
+  <h3 class="text-center mb-4">Wok Wonders: Delicious Chinese Recipes 🍜</h3>
+  <p class="text-center text-muted">From noodles to stir-fry, discover your favorite Chinese dishes!</p>
+ <br>
+  <!-- Search Bar -->
+  <div class="row mb-4">
+    <div class="col-md-6 mx-auto">
+       <input type="text" class="form-control" id="searchRecipeInput" placeholder="Search for recipes..." oninput="filterRecipeCards()">
+    </div>
+  </div>
+  
+  
+
+
+  <div class="container text-center">
+  <div class="row">
+      <div class="container my-5">
+        <div class="row pt-2 g-4">
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="kung pao chicken.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">Kung Pao Chicken</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               A bold, spicy stir-fry made with diced chicken, peanuts, vegetables, and chili peppers in a savory-sweet sauce.
+               </p>
+               <br>
+            <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#kungPaoModal">
+             View Recipe
+            </button>
+
+              </div>
+            </div>
+          </div>
+
+  <!-- 2.Sesame Chicken -->
+      
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="sesa.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">Sesame Chicken</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               Crispy chicken pieces coated in a sweet soy-garlic glaze topped with toasted sesame seeds. A restaurant-style favorite.
+               </p>
+            <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#sesameChickenModal">
+              View Recipe
+            </button>
+
+              </div>
+            </div>
+          </div>
+          
+<!-- 3.Chow mein -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="chow.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title"> Chow Mein </h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               Stir-fried noodles with vegetables, chicken/shrimp, and soy-based sauce.
+               </p>
+              <br>
+           <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#chowMeinModal">
+                View Recipe
+           </button>
+
+              </div>
+            </div>
+          </div>
+<!-- 4.Crispy Chili Potatoes-->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="cris.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title"> Crispy Chili Potatoes</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               Deep-fried potato fingers tossed in spicy Chinese sauces. A crunchy, tangy vegetarian snack.
+               </p>
+               <br>
+             <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#chiliPotatoModal">
+                View Recipe
+             </button>
+
+              </div>
+            </div>
+          </div>
+<!-- 5.General Tso’s Chicken -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="tso.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">General Tso’s Chicken</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                Deep-fried crispy chicken coated in a sweet, spicy garlic sauce.
+               </p>
+               <br>
+            <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#generalTsoModal">
+             View Recipe
+            </button>
+
+              </div>
+            </div>
+          </div>
+
+ <!--6. Hot and Sour Soup -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="soup.jpeg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title"> Hot and Sour Soup </h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+               A warming soup made with tofu, mushrooms, bamboo shoots, and a tangy-spicy broth.
+               </p>
+             <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#hotSourSoupModal">
+                 View Recipe
+            </button>
+
+              </div>
+            </div>
+          </div>
+
+ <!--7.Dumplings-->
+           <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="dump.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">Dumplings</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+               <p class="card-text">
+                Steamed or pan-fried dumplings filled with veggies or meat.
+               </p>
+               <br>
+            <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#dumplingsModal">
+              View Recipe
+            </button>
+
+              </div>
+            </div>
+          </div>
+
+
+  <!-- 8.Mapo Tofu -->
+          <div class="col-sm-12 col-md-4 col-lg-3 ">
+            <div class="card h-100 d-flex flex-column  recipe-card">
+              <img src="mapo.jpg" class="img-fluid rounded-circle img-zoom mb-2" alt="Zoom Image">
+              <div class="card-body">
+                <h5 class="card-title">Mapo Tofu</h5>
+                <div class="mb-2 star-rating">
+                  ★★★★☆
+                </div>
+                
+              <p class="card-text">
+              Spicy Sichuan tofu dish with ground pork, fermented chili bean paste, and numbing Sichuan peppercorns. Perfect with steamed rice.
+              </p>
+            <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#mapoTofuModal">
+             View Recipe
+           </button>
+
+              </div>
+            </div>
+          </div>
+
+
+<!-- Pagination -->
+<nav>
+  <ul class="pagination justify-content-center mt-4">
+     <ul class="pagination justify-content-center mt-4">
+    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item active"><a class="page-link" href="recipe.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="Recipe-page2.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="recipes-page3.html">3</a></li>
+    <li class="page-item"><a class="page-link" href="recipes-Next.html">Next</a></li>
+  </ul>
+</nav>
+
+
+       
+
+        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+
+<!-- Kung Pao Chicken Recipe Modal -->
+<div class="modal fade" id="kungPaoModal" tabindex="-1" aria-labelledby="kungPaoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-danger-subtle">
+        <h4 class="modal-title fw-bold" id="kungPaoModalLabel">🍗 Kung Pao Chicken Recipe</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        
+        <!-- Ingredients -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+          <h6 class="fw-bold text-primary mt-3">🐓 For the Chicken:</h6>
+          <ul>
+            <li>300g boneless chicken breast or thigh (cut into cubes)</li>
+            <li>1 tbsp soy sauce</li>
+            <li>1 tsp Shaoxing wine (or rice vinegar)</li>
+            <li>½ tsp cornflour</li>
+            <li>¼ tsp salt</li>
+            <li>¼ tsp pepper</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🥣 For the Sauce:</h6>
+          <ul>
+            <li>2 tbsp soy sauce</li>
+            <li>1 tbsp dark soy sauce</li>
+            <li>1 tbsp rice vinegar (or white vinegar)</li>
+            <li>1 tbsp hoisin sauce (optional)</li>
+            <li>1 tsp sugar</li>
+            <li>1 tsp sesame oil</li>
+            <li>2 tsp cornflour</li>
+            <li>4 tbsp water</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🍳 For Stir-Frying:</h6>
+          <ul>
+            <li>2 tbsp oil (peanut or vegetable)</li>
+            <li>8–10 dried red chilies (broken, seeds removed)</li>
+            <li>1 tbsp Sichuan peppercorns (optional)</li>
+            <li>4–5 garlic cloves (chopped)</li>
+            <li>1-inch ginger (chopped)</li>
+            <li>½ onion (cubed)</li>
+            <li>1 green bell pepper (cubed)</li>
+            <li>¼ cup roasted peanuts</li>
+            <li>Spring onion greens (for garnish)</li>
+          </ul>
+        </section>
+
+        <!-- Instructions -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Marinate the Chicken</h6>
+          <ul>
+            <li>Mix chicken with soy sauce, Shaoxing wine, cornflour, salt, and pepper.</li>
+            <li>Let it marinate for 15–20 minutes.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Prepare the Sauce</h6>
+          <ul>
+            <li>In a small bowl, combine soy sauces, vinegar, hoisin, sugar, sesame oil, cornflour, and water.</li>
+            <li>Stir well and set aside.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Stir-Fry</h6>
+          <ul>
+            <li>Heat oil in a wok or pan over high heat.</li>
+            <li>Add dried red chilies and Sichuan peppercorns (optional). Stir-fry briefly.</li>
+            <li>Add garlic and ginger. Sauté until aromatic.</li>
+            <li>Add marinated chicken and stir-fry for 4–5 minutes until almost cooked.</li>
+            <li>Add onion and bell pepper. Stir-fry for 2 minutes (keep them crisp).</li>
+            <li>Pour in the sauce and stir until it thickens and coats everything.</li>
+            <li>Add roasted peanuts. Toss well to combine.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 4: Finish</h6>
+          <ul>
+            <li>Garnish with spring onion greens.</li>
+            <li>Serve hot with steamed rice, fried rice, or noodles.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sesame Chicken Recipe Modal -->
+<div class="modal fade" id="sesameChickenModal" tabindex="-1" aria-labelledby="sesameChickenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-warning-subtle">
+        <h4 class="modal-title fw-bold" id="sesameChickenModalLabel">🍯 Sesame Chicken Recipe</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+
+        <!-- Ingredients Section -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+          <h6 class="fw-bold text-primary mt-3">🐔 For the Chicken:</h6>
+          <ul>
+            <li>500g boneless chicken (breast or thighs), cubed</li>
+            <li>2 tbsp soy sauce</li>
+            <li>1 egg</li>
+            <li>2 tbsp cornflour</li>
+            <li>2 tbsp all-purpose flour (maida)</li>
+            <li>½ tsp baking powder (optional – for extra crispiness)</li>
+            <li>¼ tsp salt</li>
+            <li>Oil – for deep frying</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🍯 For the Sesame Sauce:</h6>
+          <ul>
+            <li>¼ cup soy sauce</li>
+            <li>3 tbsp tomato ketchup</li>
+            <li>2 tbsp vinegar (white or rice vinegar)</li>
+            <li>3 tbsp brown sugar (or honey)</li>
+            <li>2 tsp sesame oil</li>
+            <li>1 tsp chili flakes (optional)</li>
+            <li>1 tsp garlic (minced)</li>
+            <li>1 tsp ginger (grated)</li>
+            <li>1 tsp cornflour + 2 tbsp water (slurry)</li>
+            <li>¼ cup water</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🌱 For Garnish:</h6>
+          <ul>
+            <li>1 tbsp toasted sesame seeds</li>
+            <li>Spring onion greens (chopped, optional)</li>
+          </ul>
+        </section>
+
+        <!-- Instructions Section -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Marinate and Coat Chicken</h6>
+          <ul>
+            <li>In a bowl, mix chicken, soy sauce, egg, salt, cornflour, maida, and baking powder.</li>
+            <li>Ensure chicken is well coated. Marinate for 10–15 minutes.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Fry the Chicken</h6>
+          <ul>
+            <li>Heat oil in a deep pan or wok over medium-high heat.</li>
+            <li>Fry chicken pieces in batches until golden brown and crispy.</li>
+            <li>Drain on paper towels.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Make the Sesame Sauce</h6>
+          <ul>
+            <li>In a bowl, combine soy sauce, ketchup, vinegar, sugar (or honey), sesame oil, and water.</li>
+            <li>In a pan, heat 1 tbsp oil. Add garlic and ginger; sauté for 30 seconds.</li>
+            <li>Pour in the sauce mix and simmer for 1–2 minutes.</li>
+            <li>Add cornflour slurry and stir till sauce thickens and turns glossy.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 4: Combine and Garnish</h6>
+          <ul>
+            <li>Add fried chicken to the sauce. Toss until evenly coated.</li>
+            <li>Sprinkle toasted sesame seeds and spring onions (optional).</li>
+            <li>Serve hot with rice or noodles.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Chow Mein Recipe Modal -->
+<div class="modal fade" id="chowMeinModal" tabindex="-1" aria-labelledby="chowMeinModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-info-subtle">
+        <h4 class="modal-title fw-bold" id="chowMeinModalLabel">🍜 Chow Mein Recipe (Vegetable or Chicken)</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        
+        <!-- Ingredients Section -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+          <h6 class="fw-bold text-primary mt-3">🍝 For the Noodles:</h6>
+          <ul>
+            <li>200g chow mein or hakka noodles</li>
+            <li>Water + salt + 1 tsp oil (for boiling)</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🥕 For Stir-Fry Vegetables:</h6>
+          <ul>
+            <li>1 tbsp oil (sesame or vegetable)</li>
+            <li>2 garlic cloves (minced)</li>
+            <li>1-inch ginger (finely chopped)</li>
+            <li>½ onion (sliced)</li>
+            <li>½ cup cabbage (shredded)</li>
+            <li>½ cup carrot (julienned)</li>
+            <li>½ cup bell pepper (sliced)</li>
+            <li>2 spring onions (green and white separated)</li>
+          </ul>
+
+          <strong>Optional Protein:</strong>
+          <ul>
+            <li>150g boneless chicken or tofu</li>
+            <li>1 tsp soy sauce + salt + pepper (for marinating)</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🥣 For the Sauce:</h6>
+          <ul>
+            <li>2 tbsp soy sauce</li>
+            <li>1 tbsp chili sauce or sriracha (adjust to taste)</li>
+            <li>1 tbsp vinegar (white or rice vinegar)</li>
+            <li>1 tbsp tomato ketchup (optional, for slight sweetness)</li>
+            <li>½ tsp sugar</li>
+            <li>Salt and black pepper to taste</li>
+          </ul>
+        </section>
+
+        <!-- Instructions Section -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Prepare the Noodles</h6>
+          <ul>
+            <li>Boil noodles in salted water until 90% cooked (al dente).</li>
+            <li>Drain and rinse under cold water.</li>
+            <li>Toss with 1 tsp oil to prevent sticking. Set aside.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Cook the Chicken (Optional)</h6>
+          <ul>
+            <li>Heat 1 tbsp oil in a wok or pan.</li>
+            <li>Stir-fry sliced chicken with salt, pepper, and soy sauce until cooked. Set aside.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Stir-Fry the Vegetables</h6>
+          <ul>
+            <li>Heat oil in a large wok over high heat.</li>
+            <li>Add garlic, ginger, and spring onion whites. Sauté for 30 seconds.</li>
+            <li>Add onion, cabbage, carrot, and bell pepper.</li>
+            <li>Stir-fry for 2–3 minutes. Keep veggies crunchy.</li>
+            <li>Add cooked chicken or tofu if using.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 4: Add Noodles and Sauces</h6>
+          <ul>
+            <li>Add the boiled noodles to the pan.</li>
+            <li>Pour in soy sauce, chili sauce, vinegar, ketchup, sugar, salt, and pepper.</li>
+            <li>Toss everything quickly over high heat until combined.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 5: Finish and Serve</h6>
+          <ul>
+            <li>Garnish with spring onion greens.</li>
+            <li>Serve hot with chili vinegar or soy dip on the side.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Crispy Chili Potatoes Recipe Modal -->
+<div class="modal fade" id="chiliPotatoModal" tabindex="-1" aria-labelledby="chiliPotatoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-danger-subtle">
+        <h4 class="modal-title fw-bold" id="chiliPotatoModalLabel">🍟🌶️ Crispy Chili Potatoes Recipe</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+
+        <!-- Ingredients Section -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+          <h6 class="fw-bold text-primary mt-3">🥔 For the Crispy Potatoes:</h6>
+          <ul>
+            <li>3 medium potatoes (peeled, cut into fingers or wedges)</li>
+            <li>2 tbsp cornflour</li>
+            <li>2 tbsp all-purpose flour (maida)</li>
+            <li>½ tsp red chili powder</li>
+            <li>Salt to taste</li>
+            <li>Water – as needed to make batter</li>
+            <li>Oil – for deep frying</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🍛 For the Chili Sauce:</h6>
+          <ul>
+            <li>1 tbsp oil</li>
+            <li>1 tbsp garlic (finely chopped)</li>
+            <li>1 tsp ginger (finely chopped)</li>
+            <li>1 green chili (slit or chopped)</li>
+            <li>¼ cup onion (sliced)</li>
+            <li>¼ cup capsicum (sliced)</li>
+            <li>1 tbsp soy sauce</li>
+            <li>1 tbsp red chili sauce</li>
+            <li>1 tbsp tomato ketchup</li>
+            <li>1 tsp vinegar</li>
+            <li>½ tsp sugar (optional)</li>
+            <li>1 tsp cornflour + 3 tbsp water (slurry)</li>
+            <li>Salt and pepper to taste</li>
+            <li>Spring onion greens (for garnish)</li>
+          </ul>
+        </section>
+
+        <!-- Instructions Section -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Prep and Fry Potatoes</h6>
+          <ul>
+            <li>Soak potato fingers in cold water for 10–15 mins. Drain and pat dry.</li>
+            <li>In a bowl, mix cornflour, maida, chili powder, salt, and a little water to make a thick batter.</li>
+            <li>Coat the potato fingers in the batter.</li>
+            <li>Heat oil and deep fry the potatoes until golden brown and crispy.</li>
+            <li>For extra crispness: cool for 5 mins, then re-fry on high flame for 1 minute.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Prepare the Chili Sauce</h6>
+          <ul>
+            <li>Heat 1 tbsp oil in a wok or pan.</li>
+            <li>Add chopped garlic, ginger, and green chili. Sauté for 30 seconds.</li>
+            <li>Add sliced onion and capsicum. Stir-fry for 1–2 mins on high flame.</li>
+            <li>Add soy sauce, chili sauce, ketchup, vinegar, sugar. Mix well.</li>
+            <li>Add cornflour slurry and cook until sauce thickens and becomes glossy.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Toss & Serve</h6>
+          <ul>
+            <li>Add fried potatoes to the sauce. Toss well to coat.</li>
+            <li>Garnish with chopped spring onion greens.</li>
+            <li>Serve immediately as a starter or side dish.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- General Tso’s Chicken Recipe Modal -->
+<div class="modal fade" id="generalTsoModal" tabindex="-1" aria-labelledby="generalTsoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-warning-subtle">
+        <h4 class="modal-title fw-bold" id="generalTsoModalLabel">🍗 General Tso’s Chicken Recipe</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        
+        <!-- Ingredients -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+          <h6 class="fw-bold text-primary mt-3">🐓 For the Chicken:</h6>
+          <ul>
+            <li>500g boneless chicken (breast or thigh), cubed</li>
+            <li>1 egg</li>
+            <li>2 tbsp soy sauce</li>
+            <li>3 tbsp cornflour</li>
+            <li>3 tbsp all-purpose flour (maida)</li>
+            <li>¼ tsp baking soda (optional)</li>
+            <li>Salt and pepper to taste</li>
+            <li>Oil – for deep frying</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🥣 For the Sauce:</h6>
+          <ul>
+            <li>2 tbsp soy sauce</li>
+            <li>1 tbsp hoisin sauce (optional)</li>
+            <li>2 tbsp rice vinegar (or white vinegar)</li>
+            <li>2 tbsp brown sugar (or white sugar)</li>
+            <li>1 tbsp tomato ketchup</li>
+            <li>1 tsp sesame oil</li>
+            <li>1 tsp chili flakes (adjust to taste)</li>
+            <li>1 tsp cornflour + 3 tbsp water (slurry)</li>
+            <li>¼ cup water</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🍳 For Stir-Fry:</h6>
+          <ul>
+            <li>1 tbsp oil</li>
+            <li>1 tsp garlic (finely chopped)</li>
+            <li>1 tsp ginger (finely chopped)</li>
+            <li>4–5 dried red chilies (broken)</li>
+            <li>2 spring onions (white for stir-fry, greens for garnish)</li>
+          </ul>
+        </section>
+
+        <!-- Instructions -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Marinate and Fry the Chicken</h6>
+          <ul>
+            <li>In a bowl, mix chicken, egg, soy sauce, salt, pepper, cornflour, maida, and baking soda.</li>
+            <li>Heat oil in a pan and deep-fry chicken in batches until golden brown and crispy.</li>
+            <li>Drain on a paper towel. Set aside.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Make the Sauce</h6>
+          <ul>
+            <li>In a small bowl, mix soy sauce, hoisin, vinegar, ketchup, sugar, sesame oil, chili flakes, water, and cornflour slurry.</li>
+            <li>Set the sauce aside.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Stir-Fry and Combine</h6>
+          <ul>
+            <li>Heat 1 tbsp oil in a clean wok.</li>
+            <li>Add garlic, ginger, red chilies, and white spring onions. Sauté for 30 seconds.</li>
+            <li>Pour in the sauce. Stir and cook until it thickens and turns glossy.</li>
+            <li>Add fried chicken and toss to coat well.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 4: Serve</h6>
+          <ul>
+            <li>Garnish with spring onion greens and sesame seeds (optional).</li>
+            <li>Serve hot with steamed rice or fried rice.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hot and Sour Soup Recipe Modal -->
+<div class="modal fade" id="hotSourSoupModal" tabindex="-1" aria-labelledby="hotSourSoupModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-light">
+        <h4 class="modal-title fw-bold" id="hotSourSoupModalLabel">🍲 Hot and Sour Soup Recipe</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        
+        <!-- Ingredients -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+          <h6 class="fw-bold text-primary mt-3">🥕 For the Base:</h6>
+          <ul>
+            <li>1 tbsp oil (preferably sesame or vegetable)</li>
+            <li>1 tsp ginger (finely chopped)</li>
+            <li>1 tsp garlic (finely chopped)</li>
+            <li>1 green chili (optional, chopped)</li>
+            <li>¼ cup carrot (julienned)</li>
+            <li>¼ cup cabbage (shredded)</li>
+            <li>¼ cup bell pepper/capsicum (thinly sliced)</li>
+            <li>2 tbsp spring onion (white part)</li>
+            <li>3 cups vegetable stock or water</li>
+          </ul>
+
+          <strong>For Chicken Version:</strong>
+          <ul>
+            <li>Add ½ cup shredded cooked chicken</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🥣 For Flavoring:</h6>
+          <ul>
+            <li>1 tbsp soy sauce</li>
+            <li>1 tbsp vinegar (white or rice vinegar)</li>
+            <li>1 tbsp red chili sauce</li>
+            <li>1 tsp green chili sauce (optional)</li>
+            <li>½ tbsp tomato ketchup (optional)</li>
+            <li>¼ tsp black pepper powder</li>
+            <li>Salt to taste</li>
+            <li>1 tsp sugar (optional)</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🥄 For Thickening:</h6>
+          <ul>
+            <li>1 tbsp cornflour + 2 tbsp water (corn slurry)</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🌿 For Garnish:</h6>
+          <ul>
+            <li>Spring onion greens (chopped)</li>
+            <li>Crushed chili flakes (optional)</li>
+          </ul>
+        </section>
+
+        <!-- Instructions -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Stir-Fry Vegetables</h6>
+          <ul>
+            <li>Heat oil in a wok or deep pan.</li>
+            <li>Add ginger, garlic, green chili, and spring onion whites. Sauté for 30 seconds.</li>
+            <li>Add carrots, cabbage, and bell peppers. Stir-fry for 2–3 minutes.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Add Liquids and Seasonings</h6>
+          <ul>
+            <li>Pour in stock or water.</li>
+            <li>Add soy sauce, vinegar, chili sauces, ketchup (if using), salt, sugar, and pepper.</li>
+            <li>Bring to a boil and simmer for 5–6 minutes.</li>
+            <li><strong>For chicken version:</strong> Add shredded chicken and simmer for 2–3 more minutes.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Thicken the Soup</h6>
+          <ul>
+            <li>Mix cornflour and water to form a slurry.</li>
+            <li>Slowly stir it into the soup while boiling.</li>
+            <li>Cook for another 1–2 minutes until thickened.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 4: Garnish and Serve</h6>
+          <ul>
+            <li>Turn off heat and garnish with spring onion greens and chili flakes.</li>
+            <li>Serve hot as a comforting soup starter or light meal.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Dumplings Recipe Modal -->
+<div class="modal fade" id="dumplingsModal" tabindex="-1" aria-labelledby="dumplingsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-light">
+        <h4 class="modal-title fw-bold" id="dumplingsModalLabel">🥟 Dumplings Recipe (Veg & Chicken Options)</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+
+        <!-- Ingredients -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+          <h6 class="fw-bold text-primary mt-3">🫓 For the Dumpling Dough:</h6>
+          <ul>
+            <li>2 cups all-purpose flour (maida)</li>
+            <li>¼ tsp salt</li>
+            <li>¾ cup warm water (adjust as needed)</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🥬 For Vegetable Filling:</h6>
+          <ul>
+            <li>1 cup cabbage (shredded)</li>
+            <li>½ cup carrot (grated)</li>
+            <li>½ cup capsicum (chopped)</li>
+            <li>2 tbsp spring onions (chopped)</li>
+            <li>1 tsp garlic (chopped)</li>
+            <li>1 tsp ginger (chopped)</li>
+            <li>1 tbsp soy sauce</li>
+            <li>½ tsp vinegar</li>
+            <li>Salt and pepper to taste</li>
+          </ul>
+
+          <h6 class="fw-bold text-primary mt-3">🍗 For Chicken Filling (Optional):</h6>
+          <ul>
+            <li>250g minced chicken</li>
+            <li>1 tbsp soy sauce</li>
+            <li>1 tsp ginger-garlic paste</li>
+            <li>2 tbsp spring onion (chopped)</li>
+            <li>1 tbsp onion (finely chopped)</li>
+            <li>Salt and pepper to taste</li>
+          </ul>
+        </section>
+
+        <!-- Instructions -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Make the Dough</h6>
+          <ul>
+            <li>In a bowl, mix flour and salt.</li>
+            <li>Gradually add warm water to knead a smooth, firm dough.</li>
+            <li>Cover and let rest for 20–30 minutes.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Prepare the Filling</h6>
+          <p><strong>🥕 Vegetable Filling:</strong></p>
+          <ul>
+            <li>Heat 1 tsp oil in a pan. Sauté garlic, ginger, and veggies for 2–3 minutes.</li>
+            <li>Add soy sauce, vinegar, salt, and pepper. Cook until dry.</li>
+            <li>Let the mixture cool before stuffing.</li>
+          </ul>
+
+          <p><strong>🍗 Chicken Filling:</strong></p>
+          <ul>
+            <li>Mix raw minced chicken with soy sauce, ginger-garlic paste, onion, and seasonings.</li>
+            <li>Use as is — no need to pre-cook.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Shape the Dumplings</h6>
+          <ul>
+            <li>Divide dough into small balls and roll into thin 3-inch circles.</li>
+            <li>Place 1 tbsp of filling in the center of each wrapper.</li>
+            <li>Fold and seal using pleats, half-moon, or pinch styles. Seal edges with water if needed.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 4: Cook the Dumplings</h6>
+
+          <p><strong>🥟 Steamed Dumplings:</strong></p>
+          <ul>
+            <li>Place in a greased steamer and steam for 10–12 minutes until translucent.</li>
+          </ul>
+
+          <p><strong>🥟 Pan-Fried Dumplings (Potstickers):</strong></p>
+          <ul>
+            <li>Heat 1 tbsp oil in a pan. Fry dumplings until golden on the bottom.</li>
+            <li>Add ¼ cup water, cover, and steam for 5–6 minutes until water evaporates.</li>
+          </ul>
+
+          <p><strong>🥟 Boiled Dumplings:</strong></p>
+          <ul>
+            <li>Boil in salted water until they float (about 4–5 mins).</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🍽️ Serve Hot</h6>
+          <ul>
+            <li>Serve with soy sauce, chili oil, or vinegar dip on the side.</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Mapo Tofu Recipe Modal -->
+<div class="modal fade" id="mapoTofuModal" tabindex="-1" aria-labelledby="mapoTofuModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Header -->
+      <div class="modal-header bg-danger-subtle">
+        <h4 class="modal-title fw-bold" id="mapoTofuModalLabel">🌶️🍛 Mapo Tofu Recipe (Authentic Style)</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+
+        <!-- Ingredients -->
+        <section class="mb-4">
+          <h5 class="fw-semibold">🧂 Ingredients</h5>
+
+          <h6 class="text-primary fw-bold mt-3">🥣 For the Main Dish:</h6>
+          <ul>
+            <li>400g soft tofu (silken or medium-firm), cubed</li>
+            <li>200g minced pork or chicken (optional for veg version)</li>
+            <li>2 tbsp oil (peanut or vegetable oil)</li>
+            <li>2–3 garlic cloves (minced)</li>
+            <li>1-inch ginger (minced)</li>
+            <li>2 spring onions (white part for cooking, greens for garnish)</li>
+            <li>1½ tbsp doubanjiang (Sichuan chili bean paste)</li>
+            <li>1 tbsp soy sauce</li>
+            <li>1 tsp fermented black beans (optional, mashed)</li>
+            <li>1 tsp chili oil or red chili flakes (adjust to taste)</li>
+            <li>1 tsp sugar (optional)</li>
+            <li>½ cup stock (vegetable or chicken) or water</li>
+            <li>1 tsp Sichuan peppercorns (toasted and crushed)</li>
+            <li>1 tsp cornflour + 2 tbsp water (for slurry)</li>
+          </ul>
+        </section>
+
+        <!-- Instructions -->
+        <section>
+          <h5 class="fw-semibold">👨‍🍳 Instructions</h5>
+
+          <h6 class="text-success mt-3">🔸 Step 1: Prepare the Tofu</h6>
+          <ul>
+            <li>Bring salted water to a gentle boil.</li>
+            <li>Gently boil tofu cubes for 2–3 minutes to firm up.</li>
+            <li>Drain carefully and set aside.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 2: Make the Spicy Meat Base</h6>
+          <ul>
+            <li>Heat oil in a wok or deep pan.</li>
+            <li>Sauté garlic, ginger, and spring onion whites until aromatic.</li>
+            <li>Add minced pork or chicken and stir-fry until fully cooked.</li>
+            <li>Add doubanjiang and cook for 1–2 minutes.</li>
+            <li>Add fermented black beans (if using), soy sauce, chili oil or flakes, and sugar.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 3: Add Tofu and Simmer</h6>
+          <ul>
+            <li>Carefully slide in tofu cubes.</li>
+            <li>Add stock or water and simmer for 5–6 minutes on low flame.</li>
+            <li>Add crushed Sichuan peppercorns for heat and aroma.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 4: Thicken the Sauce</h6>
+          <ul>
+            <li>Prepare cornflour slurry.</li>
+            <li>Gently stir it into the simmering mixture.</li>
+            <li>Cook for 1–2 minutes until the sauce thickens and coats the tofu.</li>
+          </ul>
+
+          <h6 class="text-success mt-3">🔸 Step 5: Garnish and Serve</h6>
+          <ul>
+            <li>Garnish with spring onion greens.</li>
+            <li>Serve hot with steamed jasmine rice or plain white rice.</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
